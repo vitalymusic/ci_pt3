@@ -46,10 +46,12 @@ class Front extends BaseController
             "images" =>["img1.jpg","img2.jpg","img3.jpg"],
             "users" => [
                 [
+                    "id"=>"1",
                     "username"=>"Pēteris",
                     "email"=>"peteris@inbox.lv"
                 ],
                 [
+                    "id"=>"2",
                     "username"=>"Jānis",
                     "email"=>"jānis@inbox.lv"
                 ]
