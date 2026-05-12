@@ -75,6 +75,23 @@ class Front extends BaseController
         }
 
 
+        public function getNav(){
+                $db = \Config\Database::connect();
+                $builder = $db->table('pages');
+                $query = $builder->select('id,page_name')->get();
+                
+                $result = [];
+
+                foreach ($query->getResultArray() as $row) {
+                   $result[] = $row;
+                }
+
+                 return $this->response->setJSON($result);
+
+
+        }
+
+
 
 
 }

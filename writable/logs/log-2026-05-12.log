@@ -163,3 +163,33 @@ in APPPATH/Views/front/page_template1.php on line 4.
 10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 18:22:17 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResultArray()
+[Method: GET, Route: api/getNav]
+in APPPATH/Controllers/Front.php on line 85.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->getNav()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 18:24:34 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+[Method: GET, Route: api/getNav]
+in APPPATH/Controllers/Front.php on line 85.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->getNav()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 18:24:35 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+[Method: GET, Route: api/getNav]
+in APPPATH/Controllers/Front.php on line 85.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->getNav()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
