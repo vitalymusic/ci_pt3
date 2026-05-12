@@ -63,6 +63,18 @@ class Front extends BaseController
     }
 
 
+        public function page($pageName="Galvenā"){
+                $db = \Config\Database::connect();
+                $builder = $db->table('pages');
+                $query = $builder->getWhere(['page_name' => $pageName]);
+
+                $result = $query->getRowArray();
+                // dd($result);
+                return view('front/page_template1',  $result);    
+               
+        }
+
+
 
 
 }

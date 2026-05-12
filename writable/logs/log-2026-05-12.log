@@ -47,3 +47,119 @@ in APPPATH/Controllers/Front.php on line 58.
 10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 17:47:31 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "galvenā"
+[Method: GET, Route: page/galven%C4%81]
+in SYSTEMPATH/Router/Router.php on line 768.
+ 1 SYSTEMPATH/Router/Router.php(219): CodeIgniter\Router\Router->checkDisallowedChars('page/galvenā')
+ 2 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle('page/galvenā')
+ 3 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 17:48:08 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "galvenā"
+[Method: GET, Route: page/galven%C4%81]
+in SYSTEMPATH/Router/Router.php on line 768.
+ 1 SYSTEMPATH/Router/Router.php(219): CodeIgniter\Router\Router->checkDisallowedChars('page/galvenā')
+ 2 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle('page/galvenā')
+ 3 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 17:48:08 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "galvenā"
+[Method: GET, Route: page/galven%C4%81]
+in SYSTEMPATH/Router/Router.php on line 768.
+ 1 SYSTEMPATH/Router/Router.php(219): CodeIgniter\Router\Router->checkDisallowedChars('page/galvenā')
+ 2 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle('page/galvenā')
+ 3 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+ERROR - 2026-05-12 18:01:17 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'PT3_WEB', 3306, '', 0)
+#1 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Controllers/Front.php(69): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/CodeIgniter.php(951): App\Controllers\Front->page('galvena')
+#6 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#7 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#9 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/rewrite.php(44): require_once('/Users/vitaly/D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Database/BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Controllers/Front.php(69): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/CodeIgniter.php(951): App\Controllers\Front->page('galvena')
+#5 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#8 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/system/rewrite.php(44): require_once('/Users/vitaly/D...')
+#11 {main}
+CRITICAL - 2026-05-12 18:01:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: GET, Route: page/galvena]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pages`
+WHERE `page_name` = :page_name:', [...], false)
+ 3 APPPATH/Controllers/Front.php(69): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->page('galvena')
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 18:02:05 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "galvenā"
+[Method: GET, Route: page/galven%C4%81]
+in SYSTEMPATH/Router/Router.php on line 768.
+ 1 SYSTEMPATH/Router/Router.php(219): CodeIgniter\Router\Router->checkDisallowedChars('page/galvenā')
+ 2 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle('page/galvenā')
+ 3 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 18:08:59 --> TypeError: view(): Argument #2 ($data) must be of type array, stdClass given, called in /Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Controllers/Front.php on line 72
+[Method: GET, Route: page/par%20mums]
+in SYSTEMPATH/Common.php on line 1238.
+ 1 APPPATH/Controllers/Front.php(72): view('front/page_template1', Object(stdClass))
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->page('par mums')
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 18:09:40 --> ErrorException: Undefined variable $title
+[Method: GET, Route: page/par%20mums]
+in APPPATH/Views/front/page_template1.php on line 4.
+ 1 APPPATH/Views/front/page_template1.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', '/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Views/front/page_template1.php', 4)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Views/front/page_template1.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('front/page_template1', [], true)
+ 5 APPPATH/Controllers/Front.php(72): view('front/page_template1', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->page('par mums')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
