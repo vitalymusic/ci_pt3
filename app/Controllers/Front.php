@@ -37,6 +37,28 @@ class Front extends BaseController
         ];
         return view('front/start',$data);
     }
+    public function all_users()
+    {
+        // 
+        $data = [
+            "title"=>"Sistēmas lietotāji",
+            "content" => "Te ir teksts",
+            "images" =>["img1.jpg","img2.jpg","img3.jpg"],
+            "users" => [
+                [
+                    "username"=>"Pēteris",
+                    "email"=>"peteris@inbox.lv"
+                ],
+                [
+                    "username"=>"Jānis",
+                    "email"=>"jānis@inbox.lv"
+                ]
+            ]
+        ];
+         
+        $this->response->setHeader('Content-Type','application/json');
+        return $this->response->setJSON($data);
+    }
 
 
 
