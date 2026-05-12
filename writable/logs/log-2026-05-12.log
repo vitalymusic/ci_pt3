@@ -1,0 +1,30 @@
+CRITICAL - 2026-05-12 16:00:28 --> ParseError: Unclosed '[' on line 16
+[Method: GET, Route: /]
+in APPPATH/Controllers/Front.php on line 21.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Controllers/Front.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Front')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Front')
+ 4 SYSTEMPATH/Router/Router.php(792): class_exists('\\App\\Controllers\\Front')
+ 5 SYSTEMPATH/Router/Router.php(230): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(829): CodeIgniter\Router\Router->handle('/')
+ 7 SYSTEMPATH/CodeIgniter.php(441): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
+CRITICAL - 2026-05-12 16:03:11 --> ErrorException: Undefined variable $titl
+[Method: GET, Route: /]
+in APPPATH/Views/front/start.php on line 4.
+ 1 APPPATH/Views/front/start.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titl', '/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Views/front/start.php', 4)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/app/Views/front/start.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('front/start', [], true)
+ 5 APPPATH/Controllers/Front.php(18): view('front/start', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Front->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/vitaly/Documents/Eiropas Tālmācības centrs/ci_pt3/public/index.php')
