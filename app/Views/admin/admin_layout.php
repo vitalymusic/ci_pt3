@@ -116,6 +116,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
+                            <i class="bi bi-cart me-2"></i> Sadaļas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
                             <i class="bi bi-people me-2"></i> Klienti
                         </a>
                     </li>
