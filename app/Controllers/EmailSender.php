@@ -20,36 +20,36 @@ class EmailSender extends BaseController
 
 
     public function sendEmail(){
-            $data = $this->$request->getPost();
+            $data = $this->request->getPost();
 
-            dd($data);
 
             $email = service('email');
 
             $email->setFrom('vitaly.music@inbox.lv', 'CI4 mājaslapa');
             $email->setTo('vitaly.music@inbox.lv');
+            $email->setReplyTo($data["epasts"], $data["vards"]);
 
 
             $email->setSubject('Email Test');
 
 
             $emailHTML = "
-                <h2>Šis epasts ir no lapas CI4 mājaslapa</h2>
+                <h2 style=\"color:red\">Šis epasts ir no lapas CI4 mājaslapa</h2>
                     Epasta sūtītājs ir: {$data["vards"]}
                     <p>Pilsēta kurā dzīvo: {$data["pilseta"]}</p>
                     <p>Ziņojums:<br>{$data["zinja"]}</p>
-
-            
             ";    
 
 
             $email->setMessage($emailHTML);
 
-            if( $email->send()){
-                echo "sended";
+            try{
+               $email->send();
+               return redirect()->to('/email');
+
+            }catch(e){
+                echo "Kļūda:, " . e . $email->printDebugger(['headers','body']);     
             }
-           
-
-
+        
     }
 }

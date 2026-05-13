@@ -23,3 +23,10 @@ $routes->get('/api/getNav', 'Front::getNav');
 $routes->get('/email', 'EmailSender::index');
 $routes->post('/email/send', 'EmailSender::sendEmail');
 
+
+
+// adminnistration
+
+$routes->get('/admin', 'Admin::index');
+$routes->get('/admin/pasutijumi', 'Admin::pasutijumi');
+
