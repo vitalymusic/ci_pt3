@@ -100,12 +100,12 @@
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<?=base_url('/admin')?>">
+                        <a class="nav-link <?=$pageNumber==1?"active":""?>" aria-current="page" href="<?=base_url('/admin')?>">
                             <i class="bi bi-house-door me-2"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/admin/pasutijumi')?>">
+                        <a class="nav-link <?=$pageNumber==2?"active":""?>" href="<?=base_url('/admin/pasutijumi')?>">
                             <i class="bi bi-file-earmark me-2"></i> Pasūtījumi
                         </a>
                     </li>
@@ -115,7 +115,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('/admin/pages')?>">
+                        <a class="nav-link <?=$pageNumber==3?"active":""?>" href="<?=base_url('/admin/pages')?>">
                             <i class="bi bi-file-earmark me-2"></i> Sadaļas
                         </a>
                     </li>

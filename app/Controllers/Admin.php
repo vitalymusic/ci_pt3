@@ -13,7 +13,8 @@ class Admin extends BaseController
     public function index(): string
     {
         $data = [
-            "title"=>"Administrēšanas panelis"
+            "title"=>"Administrēšanas panelis",
+            "pageNumber"=>1
         ];
 
         return view('admin/admin1',$data);
@@ -21,7 +22,8 @@ class Admin extends BaseController
     public function pasutijumi(): string
     {
         $data = [
-            "title"=>"Mani pasūtījumi"
+            "title"=>"Mani pasūtījumi",
+             "pageNumber"=>2
         ];
 
         return view('admin/admin2',$data);
@@ -40,6 +42,7 @@ class Admin extends BaseController
 
                 $data = [
                     "title"=>"Sadaļas",
+                    "pageNumber"=>3,
                     "pages"=> $result
                 ];
 
