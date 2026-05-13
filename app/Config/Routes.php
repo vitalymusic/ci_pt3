@@ -30,3 +30,10 @@ $routes->post('/email/send', 'EmailSender::sendEmail');
 $routes->get('/admin', 'Admin::index');
 $routes->get('/admin/pasutijumi', 'Admin::pasutijumi');
 
+// pages
+$routes->get('/admin/pages', 'Admin::pages');
+$routes->get('/admin/page/create', 'Admin::createPage');
+$routes->post('/admin/page/save', 'Admin::savePage');
+$routes->get('/admin/page/(:num)', 'Admin::page/$1');
+$routes->post('/admin/page/update/(:num)', 'Admin::updatePage/$1');
+
