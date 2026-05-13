@@ -116,7 +116,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?=base_url('/admin/pages')?>">
-                            <i class="bi bi-cart me-2"></i> Sadaļas
+                            <i class="bi bi-file-earmark me-2"></i> Sadaļas
                         </a>
                     </li>
                     <li class="nav-item">
