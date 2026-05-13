@@ -21,4 +21,5 @@ $routes->get('/api/getNav', 'Front::getNav');
 // email sender
 
 $routes->get('/email', 'EmailSender::index');
+$routes->post('/email/send', 'EmailSender::sendEmail');
 

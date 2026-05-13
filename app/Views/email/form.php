@@ -28,7 +28,7 @@
         <div class="col-md-8 form-container">
             <h2 class="mb-4 text-center"><?=$page_name?></h2>
             
-            <form action="/iesniegt" method="POST" class="needs-validation" novalidate>
+            <form action="/email/send" method="POST" class="needs-validation" novalidate>
                 
                 <!-- Teksta lauks -->
                 <div class="mb-3">
