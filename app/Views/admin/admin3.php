@@ -9,9 +9,20 @@
 <?= $this->section('content') ?>
     <h2>Sadaļas</h2>
 
-  <ul>
-        
-  </ul>
+    <div class="list-group">
+         <?php foreach($pages as $page):?> 
+                <a href="#" class="list-group-item list-group-item-action" aria-current="true" data-page-id="<?=$page["id"]?>">
+                   <?=$page["page_name"]?>
+                </a>
+        <?php endforeach?>
+       
+</div>
+
+  
+      
+
+     
+  
 
 
 <?= $this->endSection() ?>
