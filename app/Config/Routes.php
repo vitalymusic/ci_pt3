@@ -16,3 +16,9 @@ $routes->get('/page', 'Front::page');
 $routes->get('/all_users', 'Front::all_users');
 $routes->get('/api/getNav', 'Front::getNav');
 
+
+
+// email sender
+
+$routes->get('/email', 'EmailSender::index');
+
