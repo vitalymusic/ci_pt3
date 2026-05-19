@@ -50,4 +50,11 @@ class Admin extends BaseController
 
 
     }
+
+
+    public function page($pageId){
+                $query = $this->builder->getWhere(['id'=>$pageId]);
+                $result = $query->getRowArray();
+                return $this->response->setJSON($result);
+    }
 }
