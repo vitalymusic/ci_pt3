@@ -61,7 +61,7 @@ class Admin extends BaseController
 
 
     public function updatePage(){
-
+             $data = $this->request->getPost();
            
             $query = $this->builder->where('id', $data["id"])->update($data);
 
