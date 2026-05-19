@@ -35,5 +35,5 @@ $routes->get('/admin/pages', 'Admin::pages');
 $routes->get('/admin/page/create', 'Admin::createPage');
 $routes->post('/admin/page/save', 'Admin::savePage');
 $routes->get('/admin/page/(:num)', 'Admin::page/$1');
-$routes->post('/admin/page/update/(:num)', 'Admin::updatePage/$1');
+$routes->post('/admin/page/update', 'Admin::updatePage');
 

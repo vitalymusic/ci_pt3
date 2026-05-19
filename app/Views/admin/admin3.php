@@ -32,21 +32,22 @@
             <form action="" id="pageform1">
                <div class="mb-3">
                   <label for="exampleFormControlInput1" class="form-label">Sadaļas nosaukums</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Jauna sadaļa">
+                  <input type="text" class="form-control" name="page_name" id="exampleFormControlInput1" placeholder="Jauna sadaļa">
                </div>
                <div class="mb-3">
                   <label for="exampleFormControlInput2" class="form-label">Izveides datums</label>
-                  <input type="datetime" class="form-control" id="exampleFormControlInput3" placeholder="Datums">
+                  <input type="datetime" class="form-control" id="exampleFormControlInput3" name="page_date" placeholder="Datums">
                </div>
                <div class="mb-3">
                   <label for="exampleFormControlTextarea1" class="form-label">Lapas saturs</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea class="form-control" name="page_content" id="exampleFormControlTextarea1" rows="3"></textarea>
                </div>
+               <input type="hidden" name="id" value="">
             </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary saveFormBtn">Saglabāt</button>
       </div>
     </div>
   </div>
@@ -67,10 +68,15 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 <script>
  document.addEventListener("DOMContentLoaded",()=>{
+
       let pagesBtns = document.querySelectorAll('.pages a');
       let formElement = document.querySelector('#pageform1');
       let page_modal1 = new bootstrap.Modal(document.querySelector('#page_modal1'));
-
+      const editor = tinymce.activeEditor;     
+        let saveFormBtn = document.querySelector('.saveFormBtn');   
+        document.querySelector('#page_modal1').addEventListener('hidden.bs.modal', () => {
+                         window.location.reload();
+                        })  
 
 
       for( pagebtn of pagesBtns){
@@ -80,13 +86,16 @@ document.addEventListener("DOMContentLoaded",()=>{
                   fetch('<?=base_url('/admin/page/')?>'+page_id)
                      .then(data=>{return data.json()})
                      .then(data=>{
-                           console.log(formElement);
+                         
                            formElement[0].value = data.page_name;
                            formElement[1].value = data.page_date;
                            formElement[2].value = data.page_content;
-
-                           const editor = tinymce.activeEditor;
+                           document.querySelector('[name="id"]').value = data.id;
+                           
+                          
                            editor.setContent(data.page_content);
+
+
 
 
 
@@ -101,6 +110,39 @@ document.addEventListener("DOMContentLoaded",()=>{
                      .catch(error=>console.error(error));
                }
       }
+
+
+
+      // formas saglabāšana
+
+       
+
+         saveFormBtn.onclick = ()=>{
+                formElement[2].value =  editor.getContent();
+
+                let formData = new FormData(formElement);
+
+                fetch('<?=base_url('/admin/page/update')?>',{
+                  method:"POST",
+                  body:formData
+                })
+                  .then(data=>{return data.json()})
+                  .then(data=>{
+                     if(data.message=="success"){
+                        page_modal1.hide();
+                     }
+                  })
+                  .catch(error=>console.error(error));
+
+
+
+
+
+
+
+         }
+
+
 
  })  
 

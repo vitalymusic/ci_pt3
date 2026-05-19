@@ -57,4 +57,19 @@ class Admin extends BaseController
                 $result = $query->getRowArray();
                 return $this->response->setJSON($result);
     }
+
+
+
+    public function updatePage(){
+
+            $data = $this->request->getPost();
+            $query = $this->builder->where('id', $data["id"])->update($data);
+
+            if( $query){
+                return $this->response->setJSON(["message"=>"success"]);
+            }else{
+                return $this->response->setJSON(["message"=>"error"]);
+            }
+
+    }
 }
