@@ -62,7 +62,7 @@ class Admin extends BaseController
 
     public function updatePage(){
 
-            $data = $this->request->getPost();
+           
             $query = $this->builder->where('id', $data["id"])->update($data);
 
             if( $query){
@@ -72,4 +72,12 @@ class Admin extends BaseController
             }
 
     }
+
+    public function createPage(){
+              $data = $this->request->getPost();
+              $query =  $this->builder->insert($data);
+    }
+
+    // Pievienot jaunas sadaļas pievienošanu un esošo sadaļu dzēšanu
+    
 }
